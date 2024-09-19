@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "232013323271",
+    "project_id": "matcheck-fd0aa",
+    "storage_bucket": "matcheck-fd0aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232013323271:android:924bd3b4231cbbfe1f9ea2",
+        "android_client_info": {
+          "package_name": "com.codermullins.matcheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232013323271-ma9kvpaucoa3lmlf9ukhr10ou3gdebb9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codermullins.matcheck",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "232013323271-aostqp2bb5ls7abg9lf7fbrsuidu931t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2Z-m8sK9pKuo4TXThz-ILPk1B0InRZNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232013323271-aostqp2bb5ls7abg9lf7fbrsuidu931t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "232013323271-250u5n9if8ri3502cnorppfqn7f06q38.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codermullins.matcheck"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
