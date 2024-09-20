@@ -1,9 +1,13 @@
+import { Button, Pressable } from 'react-native';
+
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import ScreenHeader from '../screenHeader';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+   
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue', headerStyle: {backgroundColor: 'lightblue'}, headerTitle: () => <ScreenHeader/> }}>
       <Tabs.Screen
         name="home"
         options={{

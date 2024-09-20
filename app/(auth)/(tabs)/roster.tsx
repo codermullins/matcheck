@@ -3,7 +3,7 @@ import {Button, FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, 
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import auth from '@react-native-firebase/auth'
-import {rosterList} from '../../model/db'
+import {rosterList} from '../../../model/db'
 
 const RosterScreen = () => {
   const user = auth().currentUser
