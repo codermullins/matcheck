@@ -10,7 +10,7 @@ const HomeScreen = () => {
       <View style={styles.container}>
         <Image
           style={styles.proPic}
-          source={require('../../../assets/images/logo.png')}
+          source={require('../../../../assets/images/logo.png')}
         />
         {/* TODO add connect for school colors */}
         <Text style={styles.text}>SCHOOL NAME</Text>

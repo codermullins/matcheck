@@ -26,7 +26,7 @@ export default function RootLayout() {
     const inAuthGroup = segments[0] === '(auth)'
 
     if (user && !inAuthGroup) {
-      router.replace('/(auth)/(tabs)/home')
+      router.replace('/(auth)/(drawer)/(tabs)/home')
     } else if (!user && inAuthGroup){
       router.replace('/')
 
@@ -50,7 +50,7 @@ export default function RootLayout() {
     return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false}}/>
-      <Stack.Screen name="(auth)/(tabs)" options={{ headerShown: false}}/>
+      <Stack.Screen name="(auth)/(drawer)" options={{ headerShown: false}}/>
       <Stack.Screen name='register' options={{ headerShown: false}} />
     </Stack>
   );

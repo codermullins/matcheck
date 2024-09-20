@@ -1,12 +1,17 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { Drawer } from "expo-router/drawer";
+import { DrawerActions } from "@react-navigation/native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
 import auth from '@react-native-firebase/auth'
+import { useNavigation } from "expo-router";
 
 const ScreenHeader = () => {
+    const navigation = useNavigation();
+
     const openSideMenu = () => {
-        
+        navigation.dispatch(DrawerActions.openDrawer())
     }
 
     const goToProfile = () => {
@@ -14,7 +19,9 @@ const ScreenHeader = () => {
     }
 
     return (
+        
         <View style={styles.container}>
+            
             <FontAwesome onPress={openSideMenu} name='bars' size={25}/>
             <View>
                 <Text style={styles.title}>The Takedown</Text>
