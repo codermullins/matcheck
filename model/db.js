@@ -8,7 +8,7 @@ export const rosterList = [
   },
   {
     id: 2,
-    name: "Wrestler 2",
+    name: "Frank Doe",
     weightClass: 150,
     grade: "JR",
     email: "frankdoe.gmail.com",
@@ -29,6 +29,34 @@ export const rosterList = [
   },
   {
     id: 5,
+    name: "Wrestler 5",
+    weightClass: 285,
+    grade: "FR",
+    email: "bob.gmail.com",
+  },
+  {
+    id: 6,
+    name: "Wrestler 5",
+    weightClass: 285,
+    grade: "FR",
+    email: "bob.gmail.com",
+  },
+  {
+    id: 7,
+    name: "Wrestler 5",
+    weightClass: 285,
+    grade: "FR",
+    email: "bob.gmail.com",
+  },
+  {
+    id: 8,
+    name: "Wrestler 5",
+    weightClass: 285,
+    grade: "FR",
+    email: "bob.gmail.com",
+  },
+  {
+    id: 9,
     name: "Wrestler 5",
     weightClass: 285,
     grade: "FR",

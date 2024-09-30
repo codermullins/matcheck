@@ -20,14 +20,13 @@ const ScreenHeader = () => {
 
     return (
         
-        <View style={styles.container}>
-            
+        <View style={styles.container}>            
             <FontAwesome onPress={openSideMenu} name='bars' size={25}/>
             <View>
                 <Text style={styles.title}>The Takedown</Text>
             </View>
             <Pressable onPress= { goToProfile }>
-                <FontAwesome name="user" size={25}/>
+                <FontAwesome name="user-circle" size={25}/>
             </Pressable>
         </View>
     )

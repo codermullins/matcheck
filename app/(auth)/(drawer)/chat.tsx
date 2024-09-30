@@ -1,10 +1,9 @@
 import React from 'react'
+import { Text } from 'react-native'
 
 function chat() {
   return (
-    <div>
-      
-    </div>
+    <Text>Chat Screen</Text>
   )
 }
 
