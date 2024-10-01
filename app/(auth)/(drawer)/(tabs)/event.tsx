@@ -5,7 +5,9 @@ import React from 'react';
 const EventScreen = () => {
   return (
     <View>
-      <Text>ScheduleScreen</Text>
+        <Text style={{fontFamily: 'bold', fontSize: 30, marginTop: -50, alignSelf: 'center'}}>
+          Events
+        </Text>
     </View>
   );
 };

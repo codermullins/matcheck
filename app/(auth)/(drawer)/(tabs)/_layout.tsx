@@ -1,11 +1,5 @@
-import { Button, Pressable } from 'react-native';
-
-import AthleteProfileScreen from './athleteProfileScreen';
 import { Drawer } from 'expo-router/drawer';
-import EditProfileScreen from '../../editProfileScreen';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { NavigationContainer } from '@react-navigation/native';
-import RosterScreen from './roster';
 import ScreenHeader from '../../screenHeader';
 import { Tabs } from 'expo-router';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -56,20 +50,27 @@ export default function TabLayout() {
           tabBarButton: () => null
         }}
       />
+      <Tabs.Screen
+        name="chat"
+        options={{
+          tabBarButton: () => null
+        }}
+      />
+      <Tabs.Screen
+        name="schedule"
+        options={{
+          tabBarButton: () => null
+        }}
+      />
+      <Tabs.Screen
+        name="news"
+        options={{
+          tabBarButton: () => null
+        }}
+      />
     </Tabs>
+    
     
   );
 }
 
-function ScreenNav() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name='roster' component={RosterScreen}/>
-          
-          <Stack.Screen name='EditProfile' component={EditProfileScreen}/>
-          <Stack.Screen name='AthleteProfile' component={AthleteProfileScreen}/>
-      </Stack.Navigator>
-      </NavigationContainer>
-  )
-}

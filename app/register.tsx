@@ -49,6 +49,7 @@ function register({}) {
                     value={passwordVerify}
                     placeholder="Confirm Password"
                 />
+                
 
                 <Button
                     title="Register"

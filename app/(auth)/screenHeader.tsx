@@ -1,6 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-import { Drawer } from "expo-router/drawer";
 import { DrawerActions } from "@react-navigation/native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
@@ -38,6 +37,7 @@ export default ScreenHeader
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop: -20,
         width: '100%',
         justifyContent: 'space-between',
         alignItems: 'center',
