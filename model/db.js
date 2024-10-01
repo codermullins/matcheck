@@ -5,6 +5,8 @@ export const rosterList = [
     weightClass: 144,
     grade: "SR",
     email: "johndoe.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ export const rosterList = [
     weightClass: 150,
     grade: "JR",
     email: "frankdoe.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ export const rosterList = [
     weightClass: 285,
     grade: "SO",
     email: "jorgedoe.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ export const rosterList = [
     weightClass: 113,
     grade: "FR",
     email: "jimdoe.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ export const rosterList = [
     weightClass: 285,
     grade: "FR",
     email: "bob.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ export const rosterList = [
     weightClass: 285,
     grade: "FR",
     email: "bob.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ export const rosterList = [
     weightClass: 285,
     grade: "FR",
     email: "bob.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ export const rosterList = [
     weightClass: 285,
     grade: "FR",
     email: "bob.gmail.com",
+    win: 3,
+    lose: 5,
   },
   {
     id: 9,
@@ -61,5 +77,7 @@ export const rosterList = [
     weightClass: 285,
     grade: "FR",
     email: "bob.gmail.com",
+    win: 3,
+    lose: 5,
   },
 ];

@@ -1,15 +1,16 @@
 import {
   FlatList,
-  Pressable,
+  Image,
   StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { TextInput } from 'react-native-gesture-handler';
 import { rosterList } from '../../../../model/db';
 import { router } from 'expo-router';
 import { useNavigation } from '@react-navigation/native';
@@ -21,7 +22,13 @@ interface ItemProps {
 }
 
 const Item: FC<ItemProps> = ({ name, weightClass, grade }) => (
+  
   <View style={styles.item}>
+    <View style={{position: 'absolute'}}>
+      <Image
+          style={styles.proPic}
+          source={require('../../../../assets/images/logo.png')}
+          resizeMode='cover'/></View>
     <Text style={styles.name}>{name}</Text>
     <Text style={styles.weightClass}>{weightClass}</Text>
     <View>
@@ -30,18 +37,40 @@ const Item: FC<ItemProps> = ({ name, weightClass, grade }) => (
   </View>
 );
 
+
 const RosterScreen: FC = () => {
   const navigation = useNavigation();
+  const [searchText, setSearchText] = useState('')
+  const [filterData, setFilteredData] = useState(rosterList)
+ 
 
   const onAddPressed = (): void => {
     // navigation.navigate('AddScreen');
   };
+
+  const searchFunction = (text: string): void => {
+    setSearchText(text)
+
+    const filtered: any[] = rosterList.filter(item => 
+      item.name.toLowerCase().includes(text.toLowerCase())
+    )
+
+    setFilteredData(filtered)
+  }
   
 
   return (
     <SafeAreaView style={styles.container}>
+        <Text style={{fontFamily: 'bold', fontSize: 30, marginTop: -50, alignSelf: 'center'}}>
+          Roster
+        </Text>
+        <TextInput style={styles.searchInput}
+        placeholder='Search'
+        value={searchText}
+        onChangeText={searchFunction}/>
       <FlatList
-        data={rosterList}
+        data={filterData.sort((a,b) => a.weightClass < b.weightClass ? -1 : a.weightClass > b.weightClass ? 1: 0)}
+        keyExtractor={(item, index) => '_listtItem_' + index}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => {
@@ -52,7 +81,6 @@ const RosterScreen: FC = () => {
               name={item.name}
               weightClass={item.weightClass}
               grade={item.grade}
-              // email={item.email}
             />
           </TouchableOpacity>
         )}
@@ -64,10 +92,10 @@ const RosterScreen: FC = () => {
           borderColor: 'red',
           alignItems: 'center',
           justifyContent: 'center',
-          width: 70,
-          position: 'absolute',
+          width: 50,
+          alignSelf: 'flex-end',
           right: 20,
-          height: 70,
+          height: 50,
           backgroundColor: 'red',
           borderRadius: 100,
           bottom: 5,
@@ -97,8 +125,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 32,
     position: 'absolute',
-    alignItems: 'flex-start',
-    marginLeft: 10,
+    marginLeft: 60,
   },
   weightClass: {
     fontSize: 32,
@@ -111,5 +138,21 @@ const styles = StyleSheet.create({
     fontSize: 20,
     bottom: -15,
     marginLeft: -10,
+    marginTop: 5
+  },
+  proPic: {
+    height: 50,
+    maxWidth: 50,
+    resizeMode: 'contain',
+  },
+  searchInput: {
+    alignSelf: 'center',
+    width: '80%',
+    borderWidth: 0.5,
+    borderColor: 'grey',
+    marginBottom: 10,
+    paddingVertical: 7,
+    paddingHorizontal: 5,
+    borderRadius: 5,
   },
 });
