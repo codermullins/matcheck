@@ -18,6 +18,7 @@ export const AthleteProfileScreen = () => {
       <Text style={{fontWeight: 'bold'}}>Weight Class: </Text>{item.weightClass}</Text>
       <Text><Text style={{fontWeight: 'bold'}}>Grade: </Text>{item.grade}</Text>
       <Text><Text style={{fontWeight: 'bold'}}>Email: </Text>{item.email}</Text>
+      <Text><Text style={{fontWeight: 'bold'}}>Record: </Text>{item.win}-{item.lose}</Text>
       </View>
     </View>
   );
