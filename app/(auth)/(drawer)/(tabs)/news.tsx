@@ -18,9 +18,8 @@ const NewsCard: FC<ItemProps> = ({title, poster, content}) => (
   <Card.Divider/>
   <Text numberOfLines={2}>{content}</Text>
   <Card.Divider/>
-  //TODO add comments and attachment button if applicable
-  <Text>Date </Text><Text style={{marginRight: 0}}>{poster}</Text>
-
+    {/* TODO add comments and attachment buttons when applicable */}
+  <Text>Date <Text style={{marginRight: 0}}>{poster}</Text></Text>
 </Card>
 )
 
