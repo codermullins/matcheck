@@ -1,15 +1,21 @@
 import { Button, Image, KeyboardAvoidingView, StyleSheet, Text, TextInput, View, useWindowDimensions } from "react-native";
+import { useEffect, useState } from "react"
 
 import {FirebaseError} from 'firebase/app'
 import { Link } from "expo-router";
 import auth from '@react-native-firebase/auth'
-import { useState } from "react"
+import axios from 'axios'
+
+// const MongoUrl = 'http://192.168.1.68:4000/schools/getSchool'
 
 export default function Index() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const {height} = useWindowDimensions()
+  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState(null)
+  const [schoolName, setSchoolName] = useState("")
 
   const signUp = async () => {
     setLoading(true)
@@ -41,12 +47,25 @@ export default function Index() {
     }
   }
 
+  // useEffect(() => {
+  //   const getSchool = async () => {
+
+  //     const res = await axios.get(MongoUrl).then((res) => {
+  //       const school = res.data
+  //       setSchoolName(school[0])
+  //     console.log(schoolName)
+  //     })
+  //   }
+  //   getSchool()
+  // }, [])
+
   return (
     <View
       style={styles.container}
     >
       <Image source={require('../assets/images/logo.png')} style={[styles.logo, {height: height * 0.3}]} />
       <Text style={styles.logoText}>The TakeDown</Text>
+      
       <KeyboardAvoidingView behavior="padding">
         <Text>Email</Text>
         <TextInput style={styles.input}

@@ -71,7 +71,7 @@ const VideoScreen = () => {
     )
   }
 
-  function togggleCameraFacing(){
+  function toggleCameraFacing(){
     setFacing(current => (current === 'back' ? 'front' : 'back'))
   }
 
@@ -86,7 +86,7 @@ const VideoScreen = () => {
           <Text style={{borderWidth: 1, width: '50%', textAlign: 'center'}}>4</Text>
           <Text style={{borderWidth: 1, width: '50%', textAlign: 'center'}}>2</Text>
         </View>
-        <TouchableOpacity style={styles.button} onPress={togggleCameraFacing}>
+        <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
           <Text style={styles.text}>Flip Camera</Text>
         </TouchableOpacity>
 

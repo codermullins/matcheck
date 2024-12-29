@@ -1,13 +1,16 @@
 import { Drawer } from 'expo-router/drawer';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Provider } from 'react-redux';
 import ScreenHeader from '../../screenHeader';
 import { Tabs } from 'expo-router';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {store} from '../../../store/store';
 
 const Stack = createNativeStackNavigator()
 
 export default function TabLayout() {
   return (
+    <Provider store={store}>
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue', headerStyle: {backgroundColor: 'lightblue'}, headerTitle: () => <ScreenHeader/>}}>
       <Tabs.Screen
         name="home"
@@ -34,7 +37,8 @@ export default function TabLayout() {
         name="video"
         options={{
           title: 'Video',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="video-camera" color={color} />,
+          // tabBarIcon: ({ color }) => <FontAwesome size={28} name="video-camera" color={color} />,
+          tabBarButton: () => null
         }}
       />
       <Tabs.Screen
@@ -69,6 +73,7 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    </Provider>
     
     
   );

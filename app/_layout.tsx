@@ -3,6 +3,9 @@ import { Stack, useRouter, useSegments } from "expo-router";
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
 import { useEffect, useState } from 'react'
 
+import { Provider } from 'react-redux'
+import {store} from './store/store';
+
 export default function RootLayout() {
   const [initializing, setInitializing] = useState(true)
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>()
@@ -46,11 +49,12 @@ export default function RootLayout() {
 
 
     return (
+      <Provider store={store}>
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false}}/>
       <Stack.Screen name="(auth)/(drawer)" options={{ headerShown: false}}/>
       <Stack.Screen name='register' options={{ headerShown: false}} />
-    </Stack>
+    </Stack></Provider>
   );
 
 }
