@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/store/hooks';
 
 import auth from '@react-native-firebase/auth'
-import { getSchool } from '@/app/store/auth';
+
+// import { getSchool } from '@/app/store/auth';
 
 // import axios from 'axios'
 
@@ -13,13 +14,13 @@ import { getSchool } from '@/app/store/auth';
 const HomeScreen = () => {
   const [schoolName, setSchoolName] = useState({name: "", mascot: "", color1: ""})
 
-  const dispatch = useAppDispatch()
+  // const dispatch = useAppDispatch()
 
-  const school = useAppSelector(state => state.school.data)
+  // const school = useAppSelector(state => state.school.data)
   
-  useEffect(() => {
-    dispatch(getSchool())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(getSchool())
+  // }, [])
   
     // console.log(school)
 

@@ -23,7 +23,7 @@ const ScreenDrawer = () => {
                 onPress={() => router.push('/(auth)/(drawer)/(tabs)/news')}/>
             <DrawerItem
                 label={'Chat'}
-                onPress={() => router.push('/(auth)/(drawer)/(tabs)/chat')}
+                onPress={() => router.push('/(auth)/(drawer)/(tabs)/chats')}
                 />
             <DrawerItem
                 label={'Schedule'}

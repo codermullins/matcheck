@@ -55,8 +55,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="chat"
+        name="chats"
         options={{
+          headerShown: true,
           tabBarButton: () => null
         }}
       />

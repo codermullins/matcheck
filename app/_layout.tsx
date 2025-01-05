@@ -3,6 +3,7 @@ import { Stack, useRouter, useSegments } from "expo-router";
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
 import { useEffect, useState } from 'react'
 
+import { Colors } from '@/constants/Colors'
 import { Provider } from 'react-redux'
 import {store} from './store/store';
 
@@ -54,6 +55,20 @@ export default function RootLayout() {
       <Stack.Screen name="index" options={{ headerShown: false}}/>
       <Stack.Screen name="(auth)/(drawer)" options={{ headerShown: false}}/>
       <Stack.Screen name='register' options={{ headerShown: false}} />
+      <Stack.Screen name="(modals)/new-chat" 
+      options={{ 
+        presentation: 'modal',
+        title: 'New Chat',
+        headerTransparent: true,
+        headerBlurEffect: 'regular',
+        headerStyle: {
+          backgroundColor: Colors.dark.tabIconSelected,
+        },
+        headerSearchBarOptions: {
+          placeholder: 'Search Name',
+          hideWhenScrolling: false
+        }
+       }}/>
     </Stack></Provider>
   );
 
